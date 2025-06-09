@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Smart Financial Manager</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styleSheet.css" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+      }
+
+      .hero-section {
+        text-align: center;
+        padding: 60px;
+        background-color: #007bff;
+        color: white;
+        border-bottom: 5px solid #0056b3;
+      }
+
+      .hero-section h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .hero-section p {
+        font-size: 1.25rem;
+      }
+
+      .sfm-logo {
+        font-size: 4rem;
+        font-weight: bold;
+        color: #ffd700; /* Gold color */
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+      }
+
+      .sfm-logo span:nth-child(1) {
+        font-size: 5rem;
+        color: #28a745; /* Green for 'S' */
+      }
+
+      .sfm-logo span:nth-child(2) {
+        font-size: 4.5rem;
+        color: #dc3545; /* Red for 'F' */
+        margin: 0 5px;
+      }
+
+      .sfm-logo span:nth-child(3) {
+        font-size: 4rem;
+        color: #17a2b8; /* Blue for 'M' */
+      }
+
+      .about-me {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 1.25rem;
+        color: #555;
+      }
+
+      .about-me a {
+        color: #007bff;
+        font-weight: bold;
+        margin-bottom: 100px;
+      }
+
+      .about-me a:hover {
+        text-decoration: underline;
+      }
+
+      .features-section {
+        padding: 40px 0;
+      }
+
+      .features-section .feature-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .features-section .feature-card:hover {
+        transform: translateY(-10px);
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-top: 1px solid #ddd;
+        color: #777;
+      }
+
+      /* New modern styles */
+      .scroll-to-top-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+      }
+
+      .scroll-to-top-btn:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <h1>Welcome to Smart Financial Manager</h1>
+      <p>
+        Take control of your finances with ease. Track your expenses, manage
+        budgets, and plan your savings—all in one platform.
+      </p>
+      <a href="/login" class="btn btn-light btn-lg me-3">Log In</a>
+      <a href="/register" class="btn btn-outline-light btn-lg"
+        >Create Account</a
+      >
+    </div>
+
+    <!-- Features Section -->
+    <div class="container features-section">
+      <h2 class="text-center mb-4">Why Choose Smart Financial Manager?</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card">
+            <img
+              src="/image/budgeting.jpg"
+              alt="Budgeting"
+              class="img-fluid mb-3"
+            />
+            <h3>Effortless Budgeting</h3>
+            <p>
+              Set budgets for various categories and track your spending in
+              real-time.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <img
+              src="/image/expense.jpg"
+              alt="Expense Tracking"
+              class="img-fluid mb-3"
+            />
+            <h3>Expense Tracking</h3>
+            <p>
+              Log your daily expenses and visualize them with detailed reports.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <img src="/image/save.jpg" alt="Savings" class="img-fluid mb-3" />
+            <h3>Smart Savings</h3>
+            <p>Plan your savings and achieve financial goals effortlessly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4">How It Works</h2>
+      <p class="text-center">
+        Smart Financial Manager simplifies financial management by allowing you
+        to:
+      </p>
+      <ul class="list-group list-group-flush mx-auto" style="max-width: 600px">
+        <li class="list-group-item">
+          1. Create a personalized account to secure your data.
+        </li>
+        <li class="list-group-item">
+          2. Add transactions with details for complete tracking.
+        </li>
+        <li class="list-group-item">
+          3. View insightful charts to understand your spending habits.
+        </li>
+        <li class="list-group-item">
+          4. Stay updated with monthly and yearly financial summaries.
+        </li>
+      </ul>
+    </div>
+
+    <!-- About Me Section -->
+    <div class="about-me">
+      <p>
+        Developed by <strong>Kibrom Abebe</strong> from
+        <strong>Mekelle, Ethiopia</strong>.
+      </p>
+      <p>
+        Email:
+        <a href="mailto:kibromabebe20@gmail.com">kibromabebe20@gmail.com</a>
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; 2024 Smart Financial Manager. Built to simplify your financial
+        journey.
+      </p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div
+      class="scroll-to-top-btn"
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    >
+      ↑
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

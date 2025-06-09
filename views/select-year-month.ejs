@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Year and Month</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styleSheet.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4 primary">Select Your Year and Month (Ethiopian Calendar)</h1>
+        <h2 class="text-center mb-4 warning">የሚፈልጉትን ዓመት እና ወር ይምረጡ!</h2>
+        <form action="/select-year-month" method="POST">
+            <!-- Ethiopian Year Selection -->
+            <label for="year">Year:</label>
+            <select id="year" name="year[]" class="form-control" multiple required>
+                <!-- Populate with Ethiopian years, for example 2016-2024 -->
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+            </select>
+
+            <!-- Ethiopian Month Selection -->
+            <label for="month" class="mt-3">Month:</label>
+            <select id="month" name="month[]" class="form-control" multiple required>
+                <option value="1">Meskerem (1)</option>
+                <option value="2">Tikmt (2)</option>
+                <option value="3"> Hidar(3)</option>
+                <option value="4">Tahisas (4)</option>
+                <option value="5">Tir (5) (5)</option>
+                <option value="6">Yekatit (6)</option>
+                <option value="7">Megabit (7)</option>
+                <option value="8">Miyaziya (8)</option>
+                <option value="9">Gnbot (9)</option>
+                <option value="10">Sene (10)</option>
+                <option value="11">Hamle (11)</option>
+                <option value="12">Nehase (12)</option>
+                <option value="13">Pagumē (13)</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary mt-4">Save Selection</button>
+        </form>
+    </div>
+</body>
+
+</html>

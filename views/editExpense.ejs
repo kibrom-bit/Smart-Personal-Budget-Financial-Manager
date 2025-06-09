@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Expense</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    h1 {
+    background-color:white;
+    color: #007bff;
+    }
+    .message-success {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .alert {
+      margin-bottom: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Edit Expense(ወጪዎችዎን ያስተካክሉ)</h1>
+        <% if (successMessage) { %>
+            <div class="message-success">
+              <%= successMessage %>
+            </div>
+          <% } %>
+          <!-- Display Error Message -->
+          <% if (errorMessage) { %>
+            <div class="alert alert-danger">
+              <%= errorMessage %>
+            </div>
+          <% } %>
+        <form action="/expenses/update/<%= expense.id %>/<%= month %>/<%= year %>" method="POST">
+            <div class="form-group">
+                <label for="category">Category(ምድብ)</label>
+                <input type="text" class="form-control" id="category" name="category" value="<%= expense.category %>" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount(መጠን)</label>
+                <input type="number" class="form-control" id="amount" name="amount" value="<%= expense.amount %>" required>
+            </div>
+            <div class="form-group">
+                <label for="reason">Reason(ምክንያት)</label>
+                <input type="text" class="form-control" id="reason" name="reason" value="<%= expense.reason %>" required>
+            </div>
+            <div class="form-group">
+                <label for="month">Month(ወር)</label>
+                <input type="number" class="form-control" id="month" name="month" value="<%= expense.month %>" readonly required>
+            </div>
+            <div class="form-group">
+                <label for="year">Year(ዓመት)</label>
+                <input type="number" class="form-control" id="year" name="year" value="<%= expense.year %>" readonly required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit(አስገባ)</button>
+        </form>
+        <form action="/select-year-month">
+            <button type="submit" class="btn btn-secondary btn-block mt-3">Go Back(ወደ ኃላ)</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
